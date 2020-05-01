@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .siimple-grid-row
+    .siimple-grid-col.siimple-grid-col--3
+      .account-box
+        if username
+          h3.user-name #{username}
+          a.siimple-btn.siimple-btn--warning.siimple-btn--fluid(href='/logout') logout
+        else
+          a.siimple-btn.siimple-btn--grey.siimple-btn--fluid(href='/login') login
+          a.siimple-btn.siimple-btn--success.siimple-btn--fluid.signup-btn(href='/signup') Sign Up
+    
+    .siimple-grid-col.siimple-grid-col--9
+      if username
+        .message-form-wrapper
+          form#message-form(method='POST' action='/add-message')
+            div.input-container
+              label(for=msg-title)
+              input#msg-title.siimple-input.siimple-input--fluid(type="text" name="title" placeholder="Title here" required="required")
+            div.input-container
+              label(for="msg-text")
+              textarea.siimple-textarea.siimple-textarea--fluid(rows="5" name='text' placeholder='Text message here' required="required")
+            button.siimple-btn.siimple-btn--primary(type='submit') Post Message
+      
+      each msg in messages
+        .siimple-card
+          .siimple-card-body
+            .siimple-card-title #{msg.title}
+            if username
+              .siimple-card-subtitle @#{msg.user.username}
+            | #{msg.text}

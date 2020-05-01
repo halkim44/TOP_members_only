@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .signup-container
+    .signup-form-container
+      h1 Login
+      form(method='POST' action='/log-in')
+        div
+          label(for=username)
+          input#username.siimple-input.siimple-input--fluid(type="text" name="username" placeholder="username" required="required")
+        div
+          label(for="password")
+          input#password.siimple-input.siimple-input--fluid(type="password" name="password" placeholder="password" required="required" minlength="8")
+        button.siimple-btn.siimple-btn--primary(type='submit') Login
+    span don't have an account yet?
+      a(href='/signup') Signup

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .signup-container
+    .signup-form-container
+      h1 Sign Up
+      form#signup-form(method='POST' action='')
+        div
+          label(for=username)
+          input#username.siimple-input.siimple-input--fluid(type="text" name="username" placeholder="username" required="required")
+        div
+          label(for="password")
+          input#password.siimple-input.siimple-input--fluid(type="password" name="password" placeholder="password" required="required" minlength="8")
+        div
+          label(for="password")
+          input#confirm-password.siimple-input.siimple-input--fluid(type="password" placeholder="Confirm password" required="required" minlength="8")
+        button#signup-btn.siimple-btn.siimple-btn--primary(type='submit') Sign Up
+    span already have an account?
+      a(href='/login') login

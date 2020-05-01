@@ -1,0 +1,59 @@
+.top-menu-custom {
+  background-color: #5CDB95;
+  color: #05386B;
+  border-bottom: 2px solid #dde5ee;
+}
+
+.account-box {
+  display: block;
+  background-color: #eef2f7;
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.account-box > a:last-child {
+  margin-top: 15px;
+}
+
+.signup-btn {
+  display: block;
+}
+
+.signup-container {
+  margin: 100px auto 0;
+  max-width: 300px;
+}
+.signup-form-container {
+  border-radius: 12px;
+  border: 1px solid #dde5ee;
+  padding: 25px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.signup-form-container input {
+  margin-bottom: 14px;
+}
+.user-name {
+  text-align: center;
+}
+.message-form-wrapper {
+  background-color: #eef2f7;
+  padding: 18px 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#message-form input, #message-form textarea {
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+#message-form button {
+  float: right;
+}
+#message-form::after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+}

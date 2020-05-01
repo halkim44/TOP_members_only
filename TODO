@@ -1,0 +1,39 @@
+user story #1:
+  ✔ add siimplecss url @done(20-04-29 00:54)
+  ☐ implement background in layout.pug
+  ✔ display message list in index.pug @done(20-04-29 23:51)
+  ✔ create new mongoDb cluster data and add link to project @done(20-04-29 23:51)
+  ✔ display login and signup button @done(20-04-29 23:58)
+
+user story #2:
+  ✔ signup display @done(20-04-30 01:39)
+  ✔ signup form client side validation @done(20-04-30 01:54)
+  ✔ add new user to data @done(20-04-30 02:41)
+  ☐ can't signup error
+  ☐ same username error
+  ✘ after signup user will be redirect to index with their account logged in @cancelled(20-05-01 21:05)
+  ✔ confirm password client validation @done(20-05-01 22:07)
+  ☐ error when username is already defined in data
+
+user story #3:
+  ✔ login form display @done(20-05-01 01:24)
+  ✔ client side error handler for incomplete form @done(20-05-01 01:25)
+  ✔ display user info in index when login success @done(20-05-01 02:14)
+  ✔ display logout button in index when login success @done(20-05-01 02:14)
+  ✔ encrypt password @done(20-05-01 21:05)
+
+user story #3:
+  ✘ add message button in index @cancelled(20-05-02 01:31)
+  ✔ add message form @done(20-05-02 01:31)
+  ✔ client validation of the form @done(20-05-02 02:47)
+  ✔ setup message model data @done(20-05-02 02:47)
+  ✔ add message from form to data with author link to current user @done(20-05-02 02:47)
+  ✔ display all messages @done(20-05-02 04:00)
+
+MISC:
+  ☐ implement error 404 on undefined link
+  ☐ encypt mongoDB Url
+
+  ERRORS:
+  ✔ Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client @done(20-05-01 22:31)
+    = error because i forgot to delete return done(null, user) when using bcryptjs in index.js
