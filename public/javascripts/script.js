@@ -1,13 +1,15 @@
 let passwordClone = document.querySelector('#confirm-password');
 let password = document.getElementById('password');
-console.log(passwordClone);
-function passwordIsNotSame () {
-  return password.value !== passwordClone.value;
-}
+let signupBtn = document.getElementById('signup-btn');
 
-document.getElementById('signup-form').addEventListener('submit', event => {
-  if(passwordIsNotSame()) {
-    event.preventDefault();
-    passwordClone.setCustomValidity("Passwords Don't Match");
+function passwordCheck() {
+  if (passwordClone.value.length >= 8) {
+    if(password.value !== passwordClone.value) {
+      passwordClone.setCustomValidity("Passwords Don't Match");
+    }else {
+      passwordClone.setCustomValidity("");
+    }
   }
-})
+  console.log('cek')
+}
+passwordClone.addEventListener('keyup', passwordCheck);

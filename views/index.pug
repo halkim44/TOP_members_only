@@ -22,11 +22,13 @@ block content
               label(for="msg-text")
               textarea.siimple-textarea.siimple-textarea--fluid(rows="5" name='text' placeholder='Text message here' required="required")
             button.siimple-btn.siimple-btn--primary(type='submit') Post Message
-      
+
+      - messages.sort((a, b) => b.date_posted - a.date_posted);
       each msg in messages
-        .siimple-card
+        .siimple-card.msg-container
           .siimple-card-body
             .siimple-card-title #{msg.title}
             if username
               .siimple-card-subtitle @#{msg.user.username}
+            .siimple-card-subtitle.msg-date #{msg.date_posted_formatted}
             | #{msg.text}

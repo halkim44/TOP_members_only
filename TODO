@@ -12,7 +12,7 @@ user story #2:
   ☐ can't signup error
   ☐ same username error
   ✘ after signup user will be redirect to index with their account logged in @cancelled(20-05-01 21:05)
-  ✔ confirm password client validation @done(20-05-01 22:07)
+  ✔ confirm password client validation @done(20-05-02 18:16)
   ☐ error when username is already defined in data
 
 user story #3:
@@ -22,17 +22,21 @@ user story #3:
   ✔ display logout button in index when login success @done(20-05-01 02:14)
   ✔ encrypt password @done(20-05-01 21:05)
 
-user story #3:
+user story #4:
   ✘ add message button in index @cancelled(20-05-02 01:31)
   ✔ add message form @done(20-05-02 01:31)
   ✔ client validation of the form @done(20-05-02 02:47)
   ✔ setup message model data @done(20-05-02 02:47)
   ✔ add message from form to data with author link to current user @done(20-05-02 02:47)
   ✔ display all messages @done(20-05-02 04:00)
+  ✔ add date formatted method in message model @done(20-05-02 22:47)
+  ✔ view date in messages @done(20-05-02 23:03)
+  ✔ sort message according to date @done(20-05-02 23:16)
 
 MISC:
   ☐ implement error 404 on undefined link
   ☐ encypt mongoDB Url
+  ☐ make app live in heroku
 
   ERRORS:
   ✔ Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client @done(20-05-01 22:31)

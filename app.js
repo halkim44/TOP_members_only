@@ -5,6 +5,7 @@ const session = require("express-session");
 const passport = require("passport");
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -13,7 +14,7 @@ const app = express();
 
 //Set up mongoose connection
 const mongoose = require('mongoose');
-const mongoDB = 'mongodb+srv://halkim44:darren24@cluster0-lhxn8.azure.mongodb.net/test?retryWrites=true&w=majority';
+const mongoDB = `mongodb+srv://${process.env.NAME}:${process.env.PASSWORD}@cluster0-lhxn8.azure.mongodb.net/test?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

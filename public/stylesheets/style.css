@@ -57,3 +57,11 @@
   height: 0; 
   clear: both; 
 }
+.msg-container {
+  position: relative;
+}
+.msg-date {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
