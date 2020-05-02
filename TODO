@@ -33,6 +33,20 @@ user story #4:
   ✔ view date in messages @done(20-05-02 23:03)
   ✔ sort message according to date @done(20-05-02 23:16)
 
+secret code memebership:
+  ☐ add isMember data on user
+  ☐ add join us button that goes to a page
+  ☐ add a form page tht ask for a secret code to become a member
+  ☐ warn user if the code is wrong
+  ☐ congratulate user if success
+  ☐ display name on messages when become owner
+  ☐ make user see only his messages is named when not a member
+
+make user admin:
+  ☐ add isAdmin on user model
+  ☐ add a separate secret code that will make the user admin 
+  ☐ view delete button on messages when became an admin
+
 MISC:
   ☐ implement error 404 on undefined link
   ☐ encypt mongoDB Url

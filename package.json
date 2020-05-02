@@ -27,5 +27,20 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
+  },
+  "description": "an exclusive clubhouse where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is, but outsider can only see the story and wonder who wrote it.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halkim44/members_only.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halkim44/members_only/issues"
+  },
+  "homepage": "https://github.com/halkim44/members_only#readme",
+  "engines": {
+    "node": "12.16.2"
   }
 }
