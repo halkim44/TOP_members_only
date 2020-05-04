@@ -6,7 +6,14 @@ block content
       .account-box
         if username
           h3.user-name #{username}
-          a.siimple-btn.siimple-btn--warning.siimple-btn--fluid(href='/logout') logout
+          if !isMember
+            a.siimple-btn.siimple-btn--warning.siimple-btn--fluid(href='/member_signup') Join Us
+          else
+            if !isAdmin
+              a.siimple-btn.siimple-btn--pink.siimple-btn--fluid(href='/member_signup') Become An Admin
+
+          a.siimple-btn.siimple-btn--navy.siimple-btn--fluid(href='/logout') logout
+
         else
           a.siimple-btn.siimple-btn--grey.siimple-btn--fluid(href='/login') login
           a.siimple-btn.siimple-btn--success.siimple-btn--fluid.signup-btn(href='/signup') Sign Up
@@ -28,7 +35,20 @@ block content
         .siimple-card.msg-container
           .siimple-card-body
             .siimple-card-title #{msg.title}
-            if username
-              .siimple-card-subtitle @#{msg.user.username}
+            if isMember || (msg.user.username == username && typeof username == 'string')
+              .siimple-card-subtitle #{'@' + msg.user.username}
+
             .siimple-card-subtitle.msg-date #{msg.date_posted_formatted}
             | #{msg.text}
+          if isAdmin
+            .delete-container
+              form(method='POST' action='/delete-message')
+                input(type='hidden',name='msgid', required='true', value=msg._id )
+                button.delete-btn(type='submit')
+
+  if memberSuccessAlert
+    script
+      | setTimeout(() => alert("Success! You are now a Member!"), 100)
+  if adminSuccessAlert
+    script
+      | setTimeout(() => alert("Success! You are now an Admin!"), 100)

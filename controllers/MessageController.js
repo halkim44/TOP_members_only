@@ -8,7 +8,6 @@ const {
   sanitizeBody
 } = require('express-validator/filter');
 
-// Display Author create form on GET.
 exports.message_create_post = [
 
   // Validate fields.
@@ -20,8 +19,8 @@ exports.message_create_post = [
   }).trim().withMessage('text must be specified.'),
 
   // Sanitize fields.
-  sanitizeBody('title').escape(),
-  sanitizeBody('text').escape(),
+  sanitizeBody('title'),
+  sanitizeBody('text'),
 
   // Process request after validation and sanitization.
   (req, res, next) => {
@@ -50,3 +49,13 @@ exports.message_create_post = [
     }
   },
 ];
+
+exports.message_delete_post = (req,res,next) => {
+  if(req.user && req.user.isAdmin) {
+    Message.findByIdAndRemove(req.body.msgid, function deleteAuthor(err) {
+      if (err) { return next(err); }
+      // Success - go to author list
+    })
+  }
+  res.redirect('/');
+}

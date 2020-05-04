@@ -34,18 +34,23 @@ user story #4:
   ✔ sort message according to date @done(20-05-02 23:16)
 
 secret code memebership:
-  ☐ add isMember data on user
-  ☐ add join us button that goes to a page
-  ☐ add a form page tht ask for a secret code to become a member
-  ☐ warn user if the code is wrong
+  ✔ add isMember data on user @done(20-05-03 15:01)
+  ✔ add a way to make user isMember model to true @done(20-05-03 23:27)
+  ✔ add join us button that goes to a page @done(20-05-03 15:23)
+  ✔ add a form page tht ask for a secret code to become a member @done(20-05-03 22:44)
+  ✔ warn user if the code is wrong @done(20-05-04 01:10)
   ☐ congratulate user if success
-  ☐ display name on messages when become owner
-  ☐ make user see only his messages is named when not a member
+  ✔ display name on message when user become member @done(20-05-03 23:28)
+  ✔ make user see only his messages is named when not a member @done(20-05-03 23:28)
 
 make user admin:
-  ☐ add isAdmin on user model
-  ☐ add a separate secret code that will make the user admin 
-  ☐ view delete button on messages when became an admin
+  ✔ add isAdmin on user model @done(20-05-04 16:41)
+  ✔ isMember and isAdmin become true when correct admin secret code @done(20-05-04 16:41)
+  ✔ add a separate secret code that will make the user admin @done(20-05-04 16:41)
+  ✔ view delete button on messages when became an admin @done(20-05-05 01:41)
+
+delete message:
+  ✔ find by and ID and delete @done(20-05-05 03:35)
 
 MISC:
   ☐ implement error 404 on undefined link

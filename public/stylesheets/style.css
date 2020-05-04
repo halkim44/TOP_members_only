@@ -59,9 +59,54 @@
 }
 .msg-container {
   position: relative;
+  border-bottom: inherit;
+}
+.msg-container > .siimple-card-body{
+  z-index: 5;
+  border-bottom: 2px solid #eef2f7;
+  border-radius: 5px;
+  white-space: pre-wrap;
 }
 .msg-date {
   position: absolute;
   top: 15px;
   right: 12px;
+}
+.secret-code-form-container {
+  margin: 200px auto;
+  max-width: 700px;
+  text-align: center;
+}
+.secret-code-form-container input{
+  text-align: center;
+  max-width: 260px;
+  margin: 14px auto;
+}
+.delete-container {
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: width .8s;
+}
+.delete-container .delete-btn {
+  display: block;
+  background: url('../images/trash.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0;
+  border: 0;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+}
+
+.msg-container:hover .delete-container,.delete-container:hover {
+  width: 40px;
 }
